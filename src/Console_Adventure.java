@@ -130,6 +130,8 @@ public class Console_Adventure {
                 if (heroHealth <= 0) {
                     System.out.println("Your injuries are too grave and you die from battle...");
                     break;
+//                    Do you want to try again? [y/n]
+//                    startBattle()
                 }
             } else if (input.equals("2")) {
                 if(quantityPotions > 0 ) {
@@ -164,6 +166,8 @@ public class Console_Adventure {
             System.out.println("You have defeated the enemy!");
             System.out.println("Your heroHealth is now " + heroHealth + ".");
             System.out.println("You have " + quantityPotions + " potions left.");
+            System.out.println("Hope you enjoyed the game!");
+            quit();
         }
     }
 
