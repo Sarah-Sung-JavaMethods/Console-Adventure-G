@@ -7,16 +7,7 @@ public class Console_Adventure {
         keepAskingUser();
 //        Random random = new Random();
 
-        //Heroes
-        int heroHealth = 100;
-        int attackPoints = 40;
-        int quantityPotions = 10;
-        int potionPoints = 35;
 
-
-        //Enemies
-        int enemyHealth = 80;
-        int enemyAttackPoints = 30;
 
 
 
@@ -100,6 +91,62 @@ public class Console_Adventure {
     public static void startBattle() {
         proceed();
         System.out.println("You've encountered an enemy!");
+
+        //Heroes
+        int heroHealth = 100;
+        int attackPoints = 40;
+        int quantityPotions = 10;
+        int potionPoints = 35;
+
+
+        //Enemies
+        int enemyHealth = 80;
+        int enemyAttackPoints = 30;
+
+        while (enemyHealth > 0) {
+            Scanner sc5 = new Scanner(System.in);
+            Random random = new Random();
+
+            System.out.println("Your heroHealth is: " + heroHealth);
+            System.out.println("The enemyHealth is: " + enemyHealth);
+            System.out.println("Choose an action:");
+            System.out.println("1. Attack");
+            System.out.println("2. Drink Potion");
+            System.out.println("3. Run");
+
+            String input = sc5.nextLine();
+            if(input.equals("1")) {
+                int damageMade = random.nextInt(attackPoints);
+                int damageReceived = random.nextInt(enemyAttackPoints);
+
+                enemyHealth = enemyHealth - damageMade;
+                heroHealth = heroHealth - damageReceived;
+
+                System.out.println("You attack the enemy and made a damage of " + damageMade + ".");
+                System.out.println("You receive a damage of " + damageReceived + ".");
+
+                if (heroHealth <= 0) {
+                    System.out.println("Your injuries are too grave and you die from battle...");
+                    break;
+                }
+            } else if (input.equals("2")) {
+                if(quantityPotions > 0 ) {
+                    heroHealth = heroHealth + potionPoints;
+                    System.out.println("You drink a potion and increase your heroHealth.");
+                    System.out.println("Your heroHealth is now " + heroHealth + ".");
+                    System.out.println("You have " + quantityPotions + " potions remaining.");
+                } else {
+                    System.out.println("You have 0 potions left!");
+                }
+            } else if (input.equals("3")) {
+                System.out.println("You run from the enemy");
+                startBattle();
+            } else {
+                System.out.println("Invalid input.");
+                continue;
+            }
+
+        }
     }
 
 
@@ -112,4 +159,9 @@ public class Console_Adventure {
         System.out.println("Press any key to continue");
         String cont = sc3.nextLine();
     }
+
+
+
+
+
 }
