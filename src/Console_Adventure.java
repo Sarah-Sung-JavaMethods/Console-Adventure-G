@@ -6,6 +6,7 @@ public class Console_Adventure {
         keepAskingUser();
 
     }
+
     // Ask if the user is ready to start. If they type in "yes", start the game.
     public static void keepAskingUser() {
         Scanner sc1 = new Scanner(System.in);
@@ -46,5 +47,30 @@ public class Console_Adventure {
 //        } while
 //    }
 
+    // A classic RPG will have the hero going through different scenarios and battling their enemies.
+    // Choose your hero (1,2,3) iron man black widow captain america
+    // when user select the hero, Health, AttachPoints will be given by default
+    // enemy (Thanos?)
+    // Health of enemy can be more than hero but attach points will be less than hero.
+    // int range = XXX - 1 + 1; Use for range of XXX
+    // int attackingPower = ((int)(Math.random() *range) + 1);
+
+    // Drink potion
+    // it will be preSetted value +20 etc
+    // Scanner
+    // if (userInput == 1,2,3,) {
+        // add, subtract etc
+    // }
+
+    // Potion Drinking
+    public static int Addition(int health, int potion) {
+        return health + potion;
+    }
+    // Attacking
+    public static int Subtraction(int health, int attackingPower) {
+        // int range = XXX - 1 + 1; Use for range of XXX
+        // int attackingPower = ((int)(Math.random() *range) + 1);
+        return health - attackingPower;
+    }
 
 }
