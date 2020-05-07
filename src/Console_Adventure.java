@@ -7,10 +7,6 @@ public class Console_Adventure {
         keepAskingUser();
 //        Random random = new Random();
 
-
-
-
-
     }
     // Ask if the user is ready to start. If they type in "yes", start the game.
     public static void keepAskingUser() {
@@ -26,6 +22,9 @@ public class Console_Adventure {
                 showDescription();
                 pickHero();
                 startBattle();
+                quit();
+                System.out.println("Hope you enjoyed the game!");
+                break;
             } else {
                 quit();
                 break;
@@ -94,18 +93,21 @@ public class Console_Adventure {
 
         //Heroes
         int heroHealth = 100;
-        int attackPoints = 40;
+        //int attackPoints = 40;
         int quantityPotions = 10;
         int potionPoints = 35;
 
 
         //Enemies
-        int enemyHealth = 80;
-        int enemyAttackPoints = 30;
+        int enemyHealth = 100;
+        //int enemyAttackPoints = 30;
 
         while (enemyHealth > 0) {
             Scanner sc5 = new Scanner(System.in);
-            Random random = new Random();
+            int range = 100 - 1 + 1;
+            int damageMade = ((int)(Math.random() *range) + 1);
+            int damageReceived = ((int)(Math.random() *range) + 1);
+            // Random random = new Random();
 
             System.out.println("Your heroHealth is: " + heroHealth);
             System.out.println("The enemyHealth is: " + enemyHealth);
@@ -116,8 +118,8 @@ public class Console_Adventure {
 
             String input = sc5.nextLine();
             if(input.equals("1")) {
-                int damageMade = random.nextInt(attackPoints);
-                int damageReceived = random.nextInt(enemyAttackPoints);
+                // int damageMade = random.nextInt(attackPoints);
+                // int damageReceived = random.nextInt(enemyAttackPoints);
 
                 enemyHealth = enemyHealth - damageMade;
                 heroHealth = heroHealth - damageReceived;
@@ -132,11 +134,15 @@ public class Console_Adventure {
             } else if (input.equals("2")) {
                 if(quantityPotions > 0 ) {
                     heroHealth = heroHealth + potionPoints;
+                    quantityPotions -= 1;
                     System.out.println("You drink a potion and increase your heroHealth.");
                     System.out.println("Your heroHealth is now " + heroHealth + ".");
                     System.out.println("You have " + quantityPotions + " potions remaining.");
                 } else {
                     System.out.println("You have 0 potions left!");
+                    if (quantityPotions == 0) {
+                        disable();
+                    }
                 }
             } else if (input.equals("3")) {
                 System.out.println("You run from the enemy");
@@ -147,6 +153,22 @@ public class Console_Adventure {
             }
 
         }
+
+            //System.out.println("You have defeated the enemy!");
+            //System.out.println("Your heroHealth is now " + heroHealth + ".");
+            //System.out.println("You have " + quantityPotions + " potions left.");
+        if (heroHealth <= 0 ) {
+            System.out.println("Game Over.");
+            quit();
+        } else {
+            System.out.println("You have defeated the enemy!");
+            System.out.println("Your heroHealth is now " + heroHealth + ".");
+            System.out.println("You have " + quantityPotions + " potions left.");
+        }
+    }
+
+    public static void disable() {
+        System.out.println("You don't have a choice to drink any more potions! Attack or Run.");
     }
 
 
