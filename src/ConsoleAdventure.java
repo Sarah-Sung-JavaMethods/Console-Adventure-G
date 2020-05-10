@@ -1,47 +1,45 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Console_Adventure {
+public class ConsoleAdventure {
+
+
     public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
-        keepAskingUser();
+        gameProgression();
 //        Random random = new Random();
 
     }
-    // Ask if the user is ready to start. If they type in "yes", start the game.
-    public static void keepAskingUser() {
+
+    public static void gameProgression() {
         Scanner sc1 = new Scanner(System.in);
-        System.out.println("Do you want to start the game? [y/n]");
 
         while(true) {
-//            System.out.println("Do you want to start the game? [y/n]");
+            System.out.println("Do you want to start the game? [y/n]");
             String userInput = sc1.nextLine();
-
             if (userInput.toLowerCase().equals("y")) {
                 askUserName();
                 showDescription();
                 pickHero();
                 startBattle();
+                break;
+            } else if (userInput.toLowerCase().equals("n")){
                 quit();
-                System.out.println("Hope you enjoyed the game!");
                 break;
             } else {
-                quit();
-                break;
+                System.out.println("Invalid input.");
             }
 
         }
 
     }
 
-    // Ask the user for their name. Store this as a variable to personalize the adventure.
     public static void askUserName() {
         Scanner sc2 = new Scanner(System.in);
 
         System.out.println("What is your name?");
         String userName = sc2.nextLine();
         System.out.println("Hello " + userName + ", welcome to Malexandria!");
-
     }
 
     public static void showDescription() {
@@ -56,7 +54,6 @@ public class Console_Adventure {
         }
         proceed();
     }
-
 
     public static void pickHero() {
         Scanner sc4 = new Scanner(System.in);
@@ -93,14 +90,12 @@ public class Console_Adventure {
 
         //Heroes
         int heroHealth = 100;
-        //int attackPoints = 40;
         int quantityPotions = 10;
         int potionPoints = 35;
 
 
         //Enemies
         int enemyHealth = 100;
-        //int enemyAttackPoints = 30;
 
         while (enemyHealth > 0) {
             Scanner sc5 = new Scanner(System.in);
@@ -118,13 +113,11 @@ public class Console_Adventure {
 
             String input = sc5.nextLine();
             if(input.equals("1")) {
-                // int damageMade = random.nextInt(attackPoints);
-                // int damageReceived = random.nextInt(enemyAttackPoints);
 
                 enemyHealth = enemyHealth - damageMade;
                 heroHealth = heroHealth - damageReceived;
 
-                System.out.println("You attack the enemy and made a damage of " + damageMade + ".");
+                System.out.println("You attack the enemy and inflict a damage of " + damageMade + ".");
                 System.out.println("You receive a damage of " + damageReceived + ".");
 
                 if (heroHealth <= 0) {
@@ -154,16 +147,14 @@ public class Console_Adventure {
 
         }
 
-            //System.out.println("You have defeated the enemy!");
-            //System.out.println("Your heroHealth is now " + heroHealth + ".");
-            //System.out.println("You have " + quantityPotions + " potions left.");
         if (heroHealth <= 0 ) {
-            System.out.println("Game Over.");
-            quit();
+            gameOver();
         } else {
             System.out.println("You have defeated the enemy!");
             System.out.println("Your heroHealth is now " + heroHealth + ".");
             System.out.println("You have " + quantityPotions + " potions left.");
+            System.out.println("CONGRATULATIONS, your mission to rescue Princess Carnet is complete!");
+            System.out.println("Hope you enjoyed the game!");
         }
     }
 
@@ -171,9 +162,8 @@ public class Console_Adventure {
         System.out.println("You don't have a choice to drink any more potions! Attack or Run.");
     }
 
-
     public static void quit() {
-            System.out.println("Okay, goodbye!");
+            System.out.println("Goodbye!");
     }
 
     public static void proceed() {
@@ -182,7 +172,9 @@ public class Console_Adventure {
         String cont = sc3.nextLine();
     }
 
-
+    public static void gameOver() {
+        System.out.println("Game Over :(");
+    }
 
 
 
