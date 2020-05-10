@@ -138,8 +138,9 @@ public class ConsoleAdventure {
                     }
                 }
             } else if (input.equals("3")) {
-                System.out.println("You run from the enemy");
-                startBattle();
+                System.out.println("You run from the enemy.");
+                System.out.println("You and the princess retreat to a quiet place and pitch a tent.");
+                continue;
             } else {
                 System.out.println("Invalid input.");
                 continue;
@@ -153,7 +154,7 @@ public class ConsoleAdventure {
             System.out.println("You have defeated the enemy!");
             System.out.println("Your heroHealth is now " + heroHealth + ".");
             System.out.println("You have " + quantityPotions + " potions left.");
-            System.out.println("CONGRATULATIONS, your mission to rescue Princess Carnet is complete!");
+            System.out.println("CONGRATULATIONS, you have rescued Princess Carnet!");
             System.out.println("Hope you enjoyed the game!");
         }
     }
