@@ -139,7 +139,7 @@ public class ConsoleAdventure {
                 }
             } else if (input.equals("3")) {
                 System.out.println("You run from the enemy.");
-                System.out.println("You and the princess retreat to a quiet place and pitch a tent.");
+                System.out.println("You and the princess briefly retreat to pitch a tent nearby before re-engaging the enemy.");
                 continue;
             } else {
                 System.out.println("Invalid input.");
