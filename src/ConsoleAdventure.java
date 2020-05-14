@@ -7,7 +7,6 @@ public class ConsoleAdventure {
     public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
         gameProgression();
-//        Random random = new Random();
 
     }
 
@@ -39,7 +38,15 @@ public class ConsoleAdventure {
 
         System.out.println("What is your name?");
         String userName = sc2.nextLine();
-        System.out.println("Hello " + userName + ", welcome to Malexandria!");
+        System.out.println("Hello " + userName + ", welcome to");
+        System.out.println("\n" +
+                " ____    ____       _       _____     ________  ____  ____       _       ____  _____  ______   _______     _____       _       \n" +
+                "|_   \\  /   _|     / \\     |_   _|   |_   __  ||_  _||_  _|     / \\     |_   \\|_   _||_   _ `.|_   __ \\   |_   _|     / \\      \n" +
+                "  |   \\/   |      / _ \\      | |       | |_ \\_|  \\ \\  / /      / _ \\      |   \\ | |    | | `. \\ | |__) |    | |      / _ \\     \n" +
+                "  | |\\  /| |     / ___ \\     | |   _   |  _| _    > `' <      / ___ \\     | |\\ \\| |    | |  | | |  __ /     | |     / ___ \\    \n" +
+                " _| |_\\/_| |_  _/ /   \\ \\_  _| |__/ | _| |__/ | _/ /'`\\ \\_  _/ /   \\ \\_  _| |_\\   |_  _| |_.' /_| |  \\ \\_  _| |_  _/ /   \\ \\_  \n" +
+                "|_____||_____||____| |____||________||________||____||____||____| |____||_____|\\____||______.'|____| |___||_____||____| |____| \n" +
+                "                                                                                                                               \n");
     }
 
     public static void showDescription() {
@@ -66,16 +73,44 @@ public class ConsoleAdventure {
 
             String input = sc4.nextLine();
             if (input.equals("1")) {
-                System.out.println("Awesome! You have picked *RIDANE*.");
+                System.out.println("Awesome! You have picked");
+                System.out.println("\n" +
+                        "  ____  ___ ____    _    _   _ _____ \n" +
+                        " |  _ \\|_ _|  _ \\  / \\  | \\ | | ____|\n" +
+                        " | |_) || || | | |/ _ \\ |  \\| |  _|  \n" +
+                        " |  _ < | || |_| / ___ \\| |\\  | |___ \n" +
+                        " |_| \\_\\___|____/_/   \\_\\_| \\_|_____|\n" +
+                        "                                     \n");
                 System.out.println("Ridane is a Master Thief whose specialty is stealing dollas while attacking an enemy.");
             } else if (input.equals("2")) {
-                System.out.println("Splendid, you have selected *BEINER*.");
+                System.out.println("Splendid, you have selected");
+                System.out.println("\n" +
+                        "  ____  _____ ___ _   _ _____ ____  \n" +
+                        " | __ )| ____|_ _| \\ | | ____|  _ \\ \n" +
+                        " |  _ \\|  _|  | ||  \\| |  _| | |_) |\n" +
+                        " | |_) | |___ | || |\\  | |___|  _ < \n" +
+                        " |____/|_____|___|_| \\_|_____|_| \\_\\\n" +
+                        "                                    \n");
                 System.out.println("Beiner is the Captain of the elite Malexandrian Guards.");
             } else if (input.equals("3")) {
-                System.out.println("Witchin'! You have chosen *GIGI*.");
+                System.out.println("Witchin'! You have chosen");
+                System.out.println("\n" +
+                        "   ____ ___ ____ ___ \n" +
+                        "  / ___|_ _/ ___|_ _|\n" +
+                        " | |  _ | | |  _ | | \n" +
+                        " | |_| || | |_| || | \n" +
+                        "  \\____|___\\____|___|\n" +
+                        "                     \n");
                 System.out.println("Gigi is a powerful wizard who conjures up advanced black magic!");
             } else if (input.equals("4")) {
-                System.out.println("You have enlisted the services of *EINO*.");
+                System.out.println("You have enlisted the services of");
+                System.out.println("\n" +
+                        "  _____ ___ _   _  ___  \n" +
+                        " | ____|_ _| \\ | |/ _ \\ \n" +
+                        " |  _|  | ||  \\| | | | |\n" +
+                        " | |___ | || |\\  | |_| |\n" +
+                        " |_____|___|_| \\_|\\___/ \n" +
+                        "                        \n");
                 System.out.println("Eino is a white mage whose possesses healing powers.");
             } else {
                 System.out.println("Invalid input.");
@@ -154,7 +189,17 @@ public class ConsoleAdventure {
             System.out.println("You have defeated the enemy!");
             System.out.println("Your heroHealth is now " + heroHealth + ".");
             System.out.println("You have " + quantityPotions + " potions left.");
-            System.out.println("CONGRATULATIONS, you have rescued Princess Carnet!");
+            System.out.println("\n" +
+                    " a88888b.  .88888.  888888ba   .88888.   888888ba   .d888888  d888888P dP     dP dP         .d888888  d888888P dP  .88888.  888888ba  .d88888b  dP \n" +
+                    "d8'   `88 d8'   `8b 88    `8b d8'   `88  88    `8b d8'    88     88    88     88 88        d8'    88     88    88 d8'   `8b 88    `8b 88.    \"' 88 \n" +
+                    "88        88     88 88     88 88        a88aaaa8P' 88aaaaa88a    88    88     88 88        88aaaaa88a    88    88 88     88 88     88 `Y88888b. 88 \n" +
+                    "88        88     88 88     88 88   YP88  88   `8b. 88     88     88    88     88 88        88     88     88    88 88     88 88     88       `8b dP \n" +
+                    "Y8.   .88 Y8.   .8P 88     88 Y8.   .88  88     88 88     88     88    Y8.   .8P 88        88     88     88    88 Y8.   .8P 88     88 d8'   .8P    \n" +
+                    " Y88888P'  `8888P'  dP     dP  `88888'   dP     dP 88     88     dP    `Y88888P' 88888888P 88     88     dP    dP  `8888P'  dP     dP  Y88888P  oo \n" +
+                    "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\n" +
+                    "                                                                                                                                                   \n");
+            System.out.println("You have rescued Princess Carnet!");
+            System.out.println("You receive the Squall Medal of Honor from the crown princess for your bravery.");
             System.out.println("Hope you enjoyed the game!");
         }
     }
@@ -169,12 +214,20 @@ public class ConsoleAdventure {
 
     public static void proceed() {
         Scanner sc3 = new Scanner(System.in);
-        System.out.println("Press any key to continue");
+        System.out.println("Press enter to continue");
         String cont = sc3.nextLine();
     }
 
     public static void gameOver() {
-        System.out.println("Game Over :(");
+        System.out.println("\n" +
+                "  #####                          #######                      \n" +
+                " #     #   ##   #    # ######    #     # #    # ###### #####  \n" +
+                " #        #  #  ##  ## #         #     # #    # #      #    # \n" +
+                " #  #### #    # # ## # #####     #     # #    # #####  #    # \n" +
+                " #     # ###### #    # #         #     # #    # #      #####  \n" +
+                " #     # #    # #    # #         #     #  #  #  #      #   #  \n" +
+                "  #####  #    # #    # ######    #######   ##   ###### #    # \n" +
+                "                                                              \n");
     }
 
 
