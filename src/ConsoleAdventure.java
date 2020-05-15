@@ -3,14 +3,16 @@ import java.util.Scanner;
 
 public class ConsoleAdventure {
 
+//    static Scanner sc2 = new Scanner(System.in);
+//    static String userName = sc2.nextLine();
+
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        gameProgression();
+
+//    }
 
     public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-        gameProgression();
-
-    }
-
-    public static void gameProgression() {
         Scanner sc1 = new Scanner(System.in);
 
         while(true) {
@@ -175,10 +177,8 @@ public class ConsoleAdventure {
             } else if (input.equals("3")) {
                 System.out.println("You run from the enemy.");
                 System.out.println("You and the princess briefly retreat to pitch a tent nearby before re-engaging the enemy.");
-                continue;
             } else {
                 System.out.println("Invalid input.");
-                continue;
             }
 
         }
@@ -198,7 +198,7 @@ public class ConsoleAdventure {
                     " Y88888P'  `8888P'  dP     dP  `88888'   dP     dP 88     88     dP    `Y88888P' 88888888P 88     88     dP    dP  `8888P'  dP     dP  Y88888P  oo \n" +
                     "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\n" +
                     "                                                                                                                                                   \n");
-            System.out.println("You have rescued Princess Carnet!");
+//            System.out.printf("%s, You have rescued Princess Carnet!", userName);
             System.out.println("You receive the Squall Medal of Honor from the crown princess for your bravery.");
             System.out.println("Hope you enjoyed the game!");
         }
