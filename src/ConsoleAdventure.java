@@ -3,15 +3,6 @@ import java.util.Scanner;
 
 public class ConsoleAdventure {
 
-//    static Scanner sc2 = new Scanner(System.in);
-//    static String userName = sc2.nextLine();
-
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        gameProgression();
-
-//    }
-
     public static void main(String[] args) {
         Scanner sc1 = new Scanner(System.in);
 
@@ -37,7 +28,6 @@ public class ConsoleAdventure {
 
     public static void askUserName() {
         Scanner sc2 = new Scanner(System.in);
-
         System.out.println("What is your name?");
         String userName = sc2.nextLine();
         System.out.println("Hello " + userName + ", welcome to");
@@ -198,7 +188,7 @@ public class ConsoleAdventure {
                     " Y88888P'  `8888P'  dP     dP  `88888'   dP     dP 88     88     dP    `Y88888P' 88888888P 88     88     dP    dP  `8888P'  dP     dP  Y88888P  oo \n" +
                     "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\n" +
                     "                                                                                                                                                   \n");
-//            System.out.printf("%s, You have rescued Princess Carnet!", userName);
+            System.out.println("You have rescued Princess Carnet!");
             System.out.println("You receive the Squall Medal of Honor from the crown princess for your bravery.");
             System.out.println("Hope you enjoyed the game!");
         }
